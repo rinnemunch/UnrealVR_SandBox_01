@@ -1,49 +1,58 @@
-# 🔥 Project 1 — VR Torch Interaction (Unreal Engine 5.5.4)
+# 🔥 Project 1 – VR Torch Interaction (UE5)
 
-A Blueprint-driven VR torch built in the UE5 VR Template.
-Includes grabbing, lighting, VFX, sound, and VR-ready interaction logic.
-
----
-
-## 🎯 Features
-
-- Grab-ready torch using the VR Template GrabComponent
-- Dynamic point light with warm color for cave/horror atmospheres
-- Niagara flame effect positioned and scaled for VR use
-- Physics-enabled mesh for realistic weight and motion
-- Custom pivot + grab point alignment for natural VR hand placement
-- Torch sound cue and customized lighting color
+This project builds a **Blueprint-driven VR torch** inside **Unreal Engine 5.5.4**, using the VR Template’s built-in grab system.
+The torch includes physics, hand-snap interaction, Niagara flame effects, warm lighting, and optional sound — a clean, reusable VR mechanic for any first-person VR project.
 
 ---
 
-## 📦 Assets Used
+## 🖼️ Preview
 
-- **Medieval Torch (Free)** — torch mesh
-- **M5 VFX Vol.2 Fire & Flames (Free)** — Niagara flame systems
-
-Both assets import cleanly into the VR Template.
+![VR Torch Demo](Media/Torch.gif)
 
 ---
 
-## 🛠️ Blueprint Setup
+## 🧱 Features
 
-### **BP_Torch**
-
-- Static Mesh (scaled for VR)
-- Simulate Physics enabled
-- GrabComponent set to _Snap_
-- Point Light positioned at torch head
-- Niagara flame system aligned with light
-- Sound Cue added for torch ambience
-
-Pivot and GrabComponent are positioned for proper hand placement during VR grab.
+- **BP_Torch actor** created as the pickup object
+- **Static Mesh setup**
+  - Medieval Torch mesh imported from Fab
+  - Scaled for VR (0.01 on all axes)
+  - Simulate Physics enabled for natural weight
+- **VR GrabComponent**
+  - Grab Type: Snap
+  - Aligned to the bottom of the handle
+  - Rotation corrected (X = 180°) for natural hand orientation
+- **Lighting**
+  - Point Light added inside the torch head
+  - Intensity set to 1000
+  - Warm color applied for realistic fire glow
+- **Niagara VFX**
+  - Flame system attached (`3_Nblowingfire_fwd_pt` example)
+  - Positioned to match the light (Z alignment)
+  - Scaled for VR readability (≈10 on all axes)
+- **Pivot + Grab Point Setup**
+  - Pivot moved to bottom of torch using Pivot Offset
+  - GrabComponent aligned exactly at the holding point
+- **Sound Integration**
+  - Looping torch fire sound cue added (optional)
+  - Volume and attenuation tuned for VR presence
+- **In-Scene Testing**
+  - BP_Torch placed in VR map
+  - Lighting previewed with Ctrl + L
+  - VR Preview tested with full grab, flame, and light effects
 
 ---
 
-## 🎮 In-Game Use
+## 🚀 Result
 
-- Place _BP_Torch_ in the VR map
-- Grab using the default VR Template grab logic
-- Light, flame VFX, and sound all function in VR Preview
+Press **Play (VR Preview)**, reach out, and grab the torch.
+It snaps cleanly into your hand with:
+
+- Natural pivot-based alignment
+- Warm dynamic lighting
+- Niagara flame effects
+- Optional fire sound
+
+A polished, VR-ready torch interaction system you can drop into any VR project.
 
 ---
