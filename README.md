@@ -1,4 +1,5 @@
 # 🔥 Project 1 – VR Torch Interaction (UE5)
+**[Medium Guide](https://medium.com/@fulton_shaun/how-to-create-a-torch-in-vr-using-unreal-engine-5-256f9f1bbc84)** • **[YouTube Tutorial](https://www.youtube.com/watch?v=TWaClKwhcII)**
 
 This project builds a **Blueprint-driven VR torch** inside **Unreal Engine 5.5.4**, using the VR Template’s built-in grab system.
 The torch includes physics, hand-snap interaction, Niagara flame effects, warm lighting, and optional sound — a clean, reusable VR mechanic for any first-person VR project.
